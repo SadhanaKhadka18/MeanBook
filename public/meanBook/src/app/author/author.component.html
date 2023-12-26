@@ -1,0 +1,13 @@
+<h1 class="mb-4">Author Name: {{author.name}}</h1>
+
+<h5>
+    <p>{{author.description}}</p>
+</h5>
+
+<h3 class="mt-4">Author's Location</h3>
+<h5 class="mb-2">Latitude: <span>{{author.location.coordinates[1]}}</span></h5>
+<h5 class="mb-4">Longitude: <span>{{author.location.coordinates[0]}}</span></h5>
+<button (click)="backToBookPage()">Back</button>
+<br/>
+<button *ngIf="isLoggedIn()" class="btn btn-primary mr-2" routerLink="/book/{{bookId}}/UpdateAuthor/{{author._id}}">Edit Author</button>
+<button  *ngIf="isLoggedIn()" class="btn btn-danger" (click)="onDeleteAuthor()">Delete Author</button>

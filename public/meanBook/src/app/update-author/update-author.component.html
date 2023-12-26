@@ -1,0 +1,27 @@
+<h1 class="display-4">Update Author</h1>
+
+<form #updateAuthorForm="ngForm" (ngSubmit)="submitUpdateAuthorForm()" class="mb-4">
+    <div class="form-group col-md-6">
+        <label for="name">{{authorName}}</label>
+        <input type="text" id="name" name="name" placeholder={{authorName}} [(ngModel)]="updateAuthorData.name"
+            class="form-control">
+    </div>
+    <br>
+    <div class="form-group col-md-6">
+        <label for="description">{{authorDescription}}</label>
+        <textarea id="description" name="description" placeholder={{authorDescription}}
+            [(ngModel)]="updateAuthorData.description" class="form-control"></textarea>
+    </div>
+    <div class="form-group col-md-6">
+        <label for="latitude">{{authorLatitude}}</label>
+        <input type="text" id="latitude" name="latitude" placeholder={{authorLatitude}}
+            [(ngModel)]="updateAuthorData.latitude" class="form-control">
+    </div>
+    <div class="form-group col-md-6">
+        <label for="longitude">{{authorLongitude}}</label>
+        <input type="text" id="longitude" name="longitude" placeholder={{authorLongitude}}
+            [(ngModel)]="updateAuthorData.longitude" class="form-control">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Update Author</button>
+</form>

@@ -1,0 +1,43 @@
+<form [formGroup]="addBookForm" (ngSubmit)="onAddBookFormSubmit()" class="mb-4">
+    <div class="form-group col-md-6">
+        <label for="title">{{title}}</label>
+        <input type="text" class="form-control" placeholder={{title}} formControlName="title">
+    </div>
+
+    <div class="form-group col-md-6">
+        <label for="noOfPages">{{noOfPages}}</label>
+        <input type="text" class="form-control" placeholder={{noOfPages}} formControlName="noOfPages">
+    </div>
+
+    <div class="form-group col-md-6">
+        <label for="year">{{year}}</label>
+        <input type text="text" class="form-control" placeholder={{year}} formControlName="year">
+    </div>
+
+    <div class="form-group col-md-6">
+        <label for="publisherName">{{publisherName}}</label>
+        <input type="text" class="form-control" placeholder={{publisherName}} formControlName="publisherName">
+    </div>
+
+    <div class="form-group col-md-6">
+        <label for="authorName">{{authorName}}</label>
+        <input type="text" class="form-control" placeholder="Author Name" formControlName="authorName">
+    </div>
+
+    <div class="form-group col-md-6">
+        <label for="authorDescription">{{authorDescription}}</label>
+        <textarea class="form-control" placeholder={{authorDescription}} formControlName="authorDescription" rows="3"></textarea>
+    </div>
+
+    <div class="form-group col-md-6">
+        <label for="authorLatitude">{{authorLatitude}}</label>
+        <input type="text" class="form-control" placeholder={{authorLatitude}} formControlName="authorLatitude">
+    </div>
+
+    <div class="form-group col-md-6">
+        <label for="authorLongitude">{{authorLongitude}}</label>
+        <input type="text" class="form-control" placeholder={{authorLongitude}} formControlName="authorLongitude">
+    </div>
+<br/>
+    <button type="submit" class="btn btn-primary">Add Book</button>
+</form>

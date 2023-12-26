@@ -1,0 +1,21 @@
+<h1 class="display-4">{{book.title}}</h1>
+
+<h5 class="mt-4">Number of Pages: {{book.noOfPages}}</h5>
+
+<h5>Year: {{book.year}}</h5>
+
+<h5>Publisher Name: {{book.publisherName}}</h5>
+
+<h5>Authors:
+    <ul class="list-group">
+        <li *ngFor="let author of book.authors" class="list-group-item">
+            <h4><a routerLink="/book/{{book._id}}/author/{{author._id}}">{{author.name}}</a></h4>
+        </li>
+    </ul>
+</h5>
+<button (click)="backTobooksPage()">back</button>
+<br/>
+<button *ngIf="isLoggedIn()" class="btn btn-primary mt-4" routerLink="/updateBook/{{book._id}}">Edit Book</button>
+<button *ngIf="isLoggedIn()" class="btn btn-secondary mt-4 ml-2" routerLink="/book/{{book._id}}/AddAuthor">Add
+    Author</button>
+<button *ngIf="isLoggedIn()" class="btn btn-danger mt-4 ml-2" (click)="onDeleteBook()">Delete Book</button>
